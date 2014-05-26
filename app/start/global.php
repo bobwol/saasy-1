@@ -116,3 +116,9 @@ if (Config::has('sentry.key')) {
 	App::instance('log.buffer', $bufferHandler);
 	Log::getMonolog()->pushHandler($bufferHandler);
 }
+
+// Lookup the database credentials for this user and then set our configuration
+// environment up to use them
+
+// Set the cookie subdomain
+Config::set("session.domain", ".saasy.ssx.io");
